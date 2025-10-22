@@ -43,6 +43,13 @@ vim.keymap.set('n', '<leader>|', '<C-w>|', { silent = true, desc = 'Maximize win
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Open terminal
+vim.keymap.set('n', '<leader>st', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd 'H'
+  vim.api.nvim_win_set_width(0, 75)
+end, { desc = 'Open [T]erminal' })
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

@@ -120,7 +120,7 @@ return {
         dim_inactive_windows = false,
         extend_background_behind_borders = true,
         enable = { terminal = true, legacy_highlights = true, migrations = true },
-        styles = { italic = true, transparency = true },
+        styles = { italic = true, transparency = true, bold = false },
         groups = {
           border = 'muted',
           link = 'iris',
